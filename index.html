@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notre Dame Cathedral 3D</title>
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="scene" aria-label="Detailed 3D model of Notre Dame Cathedral"></canvas>
+
+      <section class="toolbar" aria-label="Scene controls">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <span>Notre Dame</span>
+        </div>
+
+        <div class="segmented" aria-label="Time presets">
+          <button class="icon-button" id="preset-day" type="button" title="Day view" aria-label="Day view">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+          </button>
+          <button class="icon-button" id="preset-dusk" type="button" title="Dusk view" aria-label="Dusk view">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16M6 15a6 6 0 0 1 12 0"></path><path d="M12 5v2M4.93 7.93l1.41 1.41M19.07 7.93l-1.41 1.41"></path></svg>
+          </button>
+          <button class="icon-button" id="preset-night" type="button" title="Night view" aria-label="Night view">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A7.5 7.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"></path></svg>
+          </button>
+        </div>
+
+        <label class="time-control" for="time-slider">
+          <span id="time-label">18:30</span>
+          <input id="time-slider" type="range" min="0" max="24" step="0.1" value="18.5" />
+        </label>
+
+        <div class="segmented" aria-label="Cathedral light mode">
+          <button class="icon-button active" id="lights-auto" type="button" title="Automatic cathedral lights" aria-label="Automatic cathedral lights">A</button>
+          <button class="icon-button" id="lights-on" type="button" title="Force cathedral lights on" aria-label="Force cathedral lights on">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8 14a6 6 0 1 1 8 0c-.8.7-1 1.4-1 2H9c0-.6-.2-1.3-1-2Z"></path></svg>
+          </button>
+          <button class="icon-button" id="lights-off" type="button" title="Force cathedral lights off" aria-label="Force cathedral lights off">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 3 18 18M8.4 4.8A6 6 0 0 1 16 14c-.8.7-1 1.4-1 2h-1.2M9 18h6M10 22h4M8 14a6 6 0 0 1 2.2-9.4"></path></svg>
+          </button>
+        </div>
+
+        <div class="segmented" aria-label="Camera views">
+          <button class="icon-button" id="view-front" type="button" title="West facade" aria-label="West facade">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12M8 20v-8h8v8M4 20h16"></path></svg>
+          </button>
+          <button class="icon-button" id="view-side" type="button" title="Buttresses" aria-label="Buttresses">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M5 20V8l6-3v15M11 20V9l8 4v7"></path></svg>
+          </button>
+          <button class="icon-button" id="view-aerial" type="button" title="Aerial" aria-label="Aerial">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 9l8 6 8-6-8-6Z"></path><path d="m4 15 8 6 8-6"></path></svg>
+          </button>
+        </div>
+
+        <button class="export-button" id="export-4k" type="button" title="Export 4K PNG" aria-label="Export 4K PNG">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"></path><path d="M5 21h14"></path></svg>
+          <span>4K</span>
+        </button>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
